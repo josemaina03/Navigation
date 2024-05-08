@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+ </head>
+<body>
+  <header>
+    <a href="#" class="logo"><img src="./images/logo.svg"></a>
+    <input type="checkbox" name="" id="menu-bar">
+    <label for="menu-bar"></label>
+
+    <nav class="navbar">
+      <ul>
+        <li><a href="#">Features<img src="./images/icon-arrow-down.svg" alt="down arrow"></a>
+        <ul>
+          <li><a href="#"><img src="./images/icon-todo.svg" alt="">Todo List</a></li>
+          <li><a href="#"><img src="./images/icon-calendar.svg" alt="">Calendar</a></li>
+          <li><a href="#"><img src="./images/icon-reminders.svg" alt="">Reminders</a></li>
+          <li><a href="#"><img src="./images/icon-planning.svg" alt="">Planning</a></li>
+        </ul>
+      </li>
+        <li><a href="#">Company<img src="./images/icon-arrow-down.svg" alt="down arrow"></a>
+        <ul>
+          <li><a href="#">History</a></li>
+          <li><a href="#">Our Team</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">About</a></li>
+    </nav>
+
+    <div>
+      <button class="login">Login</button>
+      <button class="reg">Register</button>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div>
+      <img src="./images/image-hero-desktop.png" alt="hero" class="hero-image">
+    </div>
+
+    <div class="hero-text">
+      <h1 class="hero-header">Make <br>remote work</h1>
+      <p class="hero-copy">Get your team in sync, no matter your location. Streamline processes, 
+        create team rituals, and watch productivity soar.</p>
+        <button class="btn--learn">Learn more</button>
+
+        <div class="client-list">
+          <ul>
+            <li><img src="./images/client-audiophile.svg" alt="audiophile"></li>
+            <li><img src="./images/client-databiz.svg" alt="databiz"></li>
+            <li><img src="./images/client-maker.svg" alt="maker"></li>
+            <li><img src="./images/client-meet.svg" alt="meet"></li>
+          </ul>
+        </div>
+    </div>
+  </section>
+  <script src="script.js"></script> 
+ </body>
+</html>

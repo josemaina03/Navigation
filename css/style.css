@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Epilogue', sans-serif;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+header {
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 0px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+    width: 20vh;
+    height: 3rem;
+    margin-top: 1.75rem;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: .9375rem;
+    padding: 1.25rem;
+    color: #000;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: #000;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 6.25rem;
+    display: none;
+    background-color: #fff;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: .0625rem solid #fff;
+}
+
+header .navbar ul li ul li ul {
+    left: 12.5rem;
+    top: 0;
+}
+
+header .navbar ul li:hover > ul,
+header .navbar ul li:focus-within > ul {
+    display: inline;    
+}
+
+#menu-bar {
+    display: none;  
+}
+
+header label {
+    display: none;
+}
+
+.login {
+    font-size: .75rem;
+    width: 5rem;
+    text-decoration: none;
+    background-color: #fff;
+    color: #000;
+    border: .125rem solid #000;
+    border-radius: .3125rem;
+    font-weight: 500;
+    /*padding: .125rem 0 .125rem 0;*/
+    cursor: pointer;
+}
+
+.reg {
+    font-size: .75rem;
+    width: 5rem;
+    font-weight: 500;
+    text-decoration: none;
+    background-color: #fff;
+    border: .125rem solid #000;
+    border-radius: .3125rem;
+    height: 4.5vh;
+    margin-left: 1.25rem;
+}
+
+.login:hover,
+.reg:hover {
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+.hero {
+
+}
+
+.hero-image {
+
+}
+
+.hero-text {
+    text-align: left;
+    text-decoration: none;
+}
+
+.hero-header {
+    font-size: 3rem;
+    color: #000;
+    left: 0;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.hero-copy {
+    margin: 0 0 10%;
+    color: gray;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
+}
+
+.btn--learn {
+    width: 10rem;
+    height: 3rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: .625rem;
+    text-decoration: none;
+}
+
+.btn--learn:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
+}
+
+.client-list ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: left;
+    margin-right: 2rem;
+    padding: 1rem;
+    left: 0;
+}
+
+.client-list img {
+    margin: .5rem;
+    }
+
+@media (min-width: 37.5rem) {
+    .hero {
+        margin: 10rem;
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .hero-image {
+        width: 15rem;
+        height: 80vh;
+    }
+}
+
+@media (max-width: 37.5rem) {
+    header {
+        padding: 1.25rem;
+    }
+
+    .learn {
+        display: none;
+    }
+
+    .reg {
+        display: none;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        border-top: .0625rem solid #000;
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+        text-align: right;
+    }
+
+    header .navbar ul li ul {
+        position: absolute;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background-color: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        left: 0;
+        width: 100%;
+    }
+
+    label {
+        background: url('../images/icon-menu.svg') no-repeat center center/cover;
+        width: 5rem;
+        height: 3vh;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: initial;
+    }
+
+    #menu-bar:checked ~ .label {
+        background: url('../images/icon-close.svg') no-repeat center center/contain;
+    }
+}
+
