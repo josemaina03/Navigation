@@ -45,26 +45,41 @@ header .navbar ul li {
     float: left;
 }
 
- ul.left {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-  
-  ul.right {
-    display: inline-block;
-    margin: 15;
-    padding: 0;
-    list-style-type: none;
-    float: right;
-  }
-  
-  ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
+header .navbar ul li a {
+    font-size: .9375rem;
+    padding: 1.25rem;
+    color: #000;
+    display: block;
+}
 
+header .navbar ul li a:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: #000;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 6.25rem;
+    display: none;
+    background-color: #fff;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: .0625rem solid #fff;
+}
+
+header .navbar ul li ul li ul {
+    left: 12.5rem;
+    top: 0;
+}
+
+header .navbar ul li:hover > ul,
+header .navbar ul li:focus-within > ul {
+    display: inline;    
+}
 
 #menu-bar {
     display: none;  
@@ -83,7 +98,7 @@ header label {
     border: .125rem solid #000;
     border-radius: .3125rem;
     font-weight: 500;
-    /*padding: .125rem 0 .125rem 0;*/
+    /padding: .125rem 0 .125rem 0;/
     cursor: pointer;
 }
 
@@ -237,6 +252,5 @@ header label {
 
     #menu-bar:checked ~ .label {
         background: url('../images/icon-close.svg') no-repeat center center/contain;
-    }
+    }
 }
-
