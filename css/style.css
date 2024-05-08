@@ -1,515 +1,257 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 0;
-    padding: 0 20px; /* Add padding to the left and right sides */
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    width: auto;
-    padding: 10px 20px;
-    background-color: white;
-  }
-  
-  h1 {
-    display: inline-block;
-    margin-right: 30px; /* Add space between "Snap" and "Features" */
-  }
-  
-  ul.left {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-  
-  ul.right {
-    display: inline-block;
-    margin: 15;
-    padding: 0;
-    list-style-type: none;
-    float: right;
-  }
-  
-  ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  h2 {
-    text-align: left; /* Align h2 to the left */
-    display: inline-block; /* Make h2 an inline-block element */
-    vertical-align: top; /* Align h2 to the top */
-    margin-right: 100px; /* Add some space between h2 and the image */
-    width: 50%; /* Adjust the width as needed */
-    margin-top: 10px; /* Add some space on top */
-    font-size: 380%; /* Increase the font size to 2 times the default */
-  }
-  
-  
-  p {
-    text-align: left; /* Align p to the left */
-    display: inline-block; /* Make p an inline-block element */
-    vertical-align: top; /* Align p to the top */
-    width: 50%; /* Adjust the width as needed */
-    margin-top: 10px; /* Add some space on top */
-  }
-  
-  .h2p {
-    margin-left: 10%;
-  }
-  img {
-    float: right;
-    max-width: 40%; /* Set a maximum width for the image */
-  }
+  font-family: 'Epilogue', sans-serif;
+  min-height: 100vh;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
 
-  .learn-more-btn {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
+header {
+  position: relative;
+  right: 0;
+  left: 0;
+  top: 0;
+  padding: 0px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1000;
+}
+
+.logo {
+    width: 20vh;
+    height: 3rem;
+    margin-top: 1.75rem;
+}
+
+.navbar ul {
+    list-style: none;
+}
+
+header .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+header .navbar ul li a {
+    font-size: .9375rem;
+    padding: 1.25rem;
+    color: #000;
+    display: block;
+}
+
+header .navbar ul li a:hover {
+    cursor: pointer;
+    background-color: lightgray;
+    color: #000;
+}
+
+header .navbar ul li ul {
+    position: absolute;
+    left: 0;
+    width: 6.25rem;
+    display: none;
+    background-color: #fff;
+}
+
+header .navbar ul li ul li {
+    width: 100%;
+    border-top: .0625rem solid #fff;
+}
+
+header .navbar ul li ul li ul {
+    left: 12.5rem;
+    top: 0;
+}
+
+header .navbar ul li:hover > ul,
+header .navbar ul li:focus-within > ul {
+    display: inline;    
+}
+
+#menu-bar {
+    display: none;  
+}
+
+header label {
+    display: none;
+}
+
+.login {
+    font-size: .75rem;
+    width: 5rem;
     text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 20px; /* Add some space between the paragraph and the button */
+    background-color: #fff;
+    color: #000;
+    border: .125rem solid #000;
+    border-radius: .3125rem;
+    font-weight: 500;
+    /*padding: .125rem 0 .125rem 0;*/
     cursor: pointer;
 }
-  
-.arrow {
-    margin-left: 5px; /* Add space between "Company" text and the arrow */
-}
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.reg {
+    font-size: .75rem;
+    width: 5rem;
+    font-weight: 500;
     text-decoration: none;
-    display: block;
+    background-color: #fff;
+    border: .125rem solid #000;
+    border-radius: .3125rem;
+    height: 4.5vh;
+    margin-left: 1.25rem;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.arrow {
-    margin-left: 5px; /* Add space between text and arrow */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-
-.dropdown-content a i {
-    margin-right: 10px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.bottom-left-images {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.bottom-left-images img {
-    display: inline-block;
-    width: 100px; /* Adjust the width as needed */
-    margin-right: 10%; /* Add some space between images */
-    margin-bottom: 10px; /* Add some space between images and other content */
-    margin-left: 2cm;
-}
-
-
-
-.left li.dropdown:hover,
-.left li.dropdown:hover .arrow {
-    color: grey;
-    display: inline-block;
-}
-
-.left li,
-.right li {
-    color: black; /* Default color */
-    transition: color 0.3s; /* Smooth color transition */
-    position: relative; /* Position relative for pseudo elements */
-    cursor: pointer; /* Add a pointer cursor to indicate clickability */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px; /* Add rounded corners */
-    padding: 10px 0; /* Add some padding to the content */
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    transition: background-color 0.3s; /* Smooth background color transition */
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.left li:hover,
-.left li:hover .arrow {
-    color: grey;
-    display: inline-block;
-}
-
-/* Responsive styles */
-
-@media only screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
-    }
-
-    h1 {
-        margin-right: 0;
-    }
-
-    ul.left {
-        display: block;
-        text-align: center;
-    }
-
-    ul.right {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .h2p {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    img {
-        float: none;
-        max-width: 100%;
-    }
-
-    .learn-more-btn {
-        margin-top: 20px;
-    }
-
-    .bottom-left-images {
-        position: static;
-        text-align: center;
-    }
-
-    .bottom-left-images img {
-        display: inline-block;
-        width: 80px;
-        margin: 10px;
-    }
-}body {
-    margin: 0;
-    padding: 0 20px; /* Add padding to the left and right sides */
-    font-family: Arial, sans-serif;
-  }
-  
-  .container {
-    width: auto;
-    padding: 10px 20px;
-    background-color: white;
-  }
-  
-  h1 {
-    display: inline-block;
-    margin-right: 30px; /* Add space between "Snap" and "Features" */
-  }
-  
-  ul.left {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-  }
-  
-  ul.right {
-    display: inline-block;
-    margin: 15;
-    padding: 0;
-    list-style-type: none;
-    float: right;
-  }
-  
-  ul li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-  
-  .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-  
-  h2 {
-    text-align: left; /* Align h2 to the left */
-    display: inline-block; /* Make h2 an inline-block element */
-    vertical-align: top; /* Align h2 to the top */
-    margin-right: 100px; /* Add some space between h2 and the image */
-    width: 50%; /* Adjust the width as needed */
-    margin-top: 10px; /* Add some space on top */
-    font-size: 380%; /* Increase the font size to 2 times the default */
-  }
-  
-  
-  p {
-    text-align: left; /* Align p to the left */
-    display: inline-block; /* Make p an inline-block element */
-    vertical-align: top; /* Align p to the top */
-    width: 50%; /* Adjust the width as needed */
-    margin-top: 10px; /* Add some space on top */
-  }
-  
-  .h2p {
-    margin-left: 10%;
-  }
-  img {
-    float: right;
-    max-width: 40%; /* Set a maximum width for the image */
-  }
-
-  .learn-more-btn {
-    background-color: black;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 20px; /* Add some space between the paragraph and the button */
+.login:hover,
+.reg:hover {
+    background-color: #000;
+    color: #fff;
     cursor: pointer;
 }
-  
-.arrow {
-    margin-left: 5px; /* Add space between "Company" text and the arrow */
+
+.hero {
+
 }
 
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+.hero-image {
+
 }
 
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.hero-text {
+    text-align: left;
     text-decoration: none;
-    display: block;
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.arrow {
-    margin-left: 5px; /* Add space between text and arrow */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
-}
-
-
-.dropdown-content a i {
-    margin-right: 10px;
-}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-
-.bottom-left-images {
-    position: absolute;
-    bottom: 0;
+.hero-header {
+    font-size: 3rem;
+    color: #000;
     left: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-}
-.bottom-left-images img {
-    display: inline-block;
-    width: 100px; /* Adjust the width as needed */
-    margin-right: 10%; /* Add some space between images */
-    margin-bottom: 10px; /* Add some space between images and other content */
-    margin-left: 2cm;
+    text-align: left;
+    font-weight: 700;
+    line-height: 1.1;
 }
 
-
-
-.left li.dropdown:hover,
-.left li.dropdown:hover .arrow {
-    color: grey;
-    display: inline-block;
+.hero-copy {
+    margin: 0 0 10%;
+    color: gray;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-align: left;
 }
 
-.left li,
-.right li {
-    color: black; /* Default color */
-    transition: color 0.3s; /* Smooth color transition */
-    position: relative; /* Position relative for pseudo elements */
-    cursor: pointer; /* Add a pointer cursor to indicate clickability */
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-    border-radius: 5px; /* Add rounded corners */
-    padding: 10px 0; /* Add some padding to the content */
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
+.btn--learn {
+    width: 10rem;
+    height: 3rem;
+    background-color: #000;
+    color: #fff;
+    border-radius: .625rem;
     text-decoration: none;
-    display: block;
-    transition: background-color 0.3s; /* Smooth background color transition */
 }
 
-.dropdown-content a:hover {
-    background-color: #f1f1f1;
+.btn--learn:hover {
+    background-color: #fff;
+    color: #000;
+    cursor: pointer;
 }
 
-.left li:hover,
-.left li:hover .arrow {
-    color: grey;
-    display: inline-block;
+.client-list ul {
+    text-decoration: none;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: left;
+    margin-right: 2rem;
+    padding: 1rem;
+    left: 0;
 }
 
-/* Responsive styles */
-
-@media only screen and (max-width: 768px) {
-    .container {
-        padding: 10px;
+.client-list img {
+    margin: .5rem;
     }
 
-    h1 {
-        margin-right: 0;
+@media (min-width: 37.5rem) {
+    .hero {
+        margin: 10rem;
+        display: flex;
+        flex-direction: row-reverse;
     }
 
-    ul.left {
-        display: block;
-        text-align: center;
-    }
-
-    ul.right {
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    ul li {
-        display: block;
-        margin: 10px 0;
-    }
-
-    .h2p {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    img {
-        float: none;
-        max-width: 100%;
-    }
-
-    .learn-more-btn {
-        margin-top: 20px;
-    }
-
-    .bottom-left-images {
-        position: static;
-        text-align: center;
-    }
-
-    .bottom-left-images img {
-        display: inline-block;
-        width: 80px;
-        margin: 10px;
+    .hero-image {
+        width: 15rem;
+        height: 80vh;
     }
 }
+
+@media (max-width: 37.5rem) {
+    header {
+        padding: 1.25rem;
+    }
+
+    .learn {
+        display: none;
+    }
+
+    .reg {
+        display: none;
+    }
+
+    header label {
+        display: initial;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #fff;
+        border-top: .0625rem solid #000;
+        display: none;
+    }
+
+    header .navbar ul li {
+        width: 100%;
+        text-align: right;
+    }
+
+    header .navbar ul li ul {
+        position: absolute;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li {
+        background-color: #eee;
+    }
+
+    header .navbar ul li ul li ul {
+        left: 0;
+        width: 100%;
+    }
+
+    label {
+        background: url('../images/icon-menu.svg') no-repeat center center/cover;
+        width: 5rem;
+        height: 3vh;
+    }
+
+    #menu-bar:checked ~ .navbar {
+        display: initial;
+    }
+
+    #menu-bar:checked ~ .label {
+        background: url('../images/icon-close.svg') no-repeat center center/contain;
+    }
+}
+
