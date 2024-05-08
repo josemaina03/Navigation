@@ -98,7 +98,7 @@ header label {
     border: .125rem solid #000;
     border-radius: .3125rem;
     font-weight: 500;
-    /padding: .125rem 0 .125rem 0;/
+    /*padding: .125rem 0 .125rem 0;*/
     cursor: pointer;
 }
 
@@ -252,5 +252,6 @@ header label {
 
     #menu-bar:checked ~ .label {
         background: url('../images/icon-close.svg') no-repeat center center/contain;
-    }
+    }
 }
+
