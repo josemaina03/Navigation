@@ -52,10 +52,10 @@ header .navbar ul li a {
     color: #000;
     display: block;
 }
-
+       
 header .navbar ul li a:hover {
     cursor: pointer;
-    background-color: lightgray;
+    background-color:   lightgray;
     color: #000;
 }
 
