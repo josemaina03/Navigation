@@ -248,6 +248,7 @@ header label {
         height: 3vh;
     }
 
+  
     #menu-bar:checked ~ .navbar {
         display: initial;
     }
